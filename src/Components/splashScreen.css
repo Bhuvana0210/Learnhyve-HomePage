@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.splashScreen {
+    border: 1px solid #000;
+    height: 100vh;
+    width: 100%;
+    background-color: hsla(0, 0%, 0%, 0.93);
+    background-image: url(../images/students3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circleLogo img {
+    height: 300px;
+    width: 300px;
+    margin-top: 250px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid orange;
+    box-shadow: 0 0 60px rgba(244, 162, 97, 0.8), 0 0 80px rgba(244, 162, 97, 0.5),
+        0 0 120px rgba(244, 162, 97, 0.3);
+    animation: animate_logo 2s infinite alternate;
+
+}
+
+@keyframes animate_logo {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.15);
+    }
+}
+
+.scroll {
+    color: white;
+    font-weight: bold;
+}
+
+
+.down {
+    margin-top: 80px;
+    font-size: 50px;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.8),
+        0 0 20px rgba(255, 140, 0, 0.8),
+        0 0 30px rgba(255, 69, 0, 0.8);
+}
+
+.scroll,
+.down {
+    display: flex;
+    justify-content: center;
+}
+
+.scroll,
+.down {
+    animation: animate_splash 1s infinite alternate;
+}
+
+@keyframes animate_splash {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
