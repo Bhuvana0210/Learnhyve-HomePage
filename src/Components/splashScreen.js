@@ -9,9 +9,10 @@ const SplashScreen = () => {
         <div className="splashScreen">
             <div className="circleLogo">
                 <img src={circleLogo} alt="LearnHyve" />
-                <i class="fa-solid fa-chevron-down down"></i>
-                <h1 className="scroll">Scroll Down</h1>
-                {/* <i class="fa-solid fa-v"></i> */}
+                <div className="scrollWrapper">
+                    <i class="fa-solid fa-chevron-down down"></i>
+                    <h1 className="scroll">Scroll Down</h1>
+                </div>
             </div>
 
         </div>
