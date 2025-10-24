@@ -1,0 +1,173 @@
+body {
+  animation: gradientAnimation 2s alternate infinite;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background: linear-gradient(45deg, #c0f0f0, #fad0c4);
+  }
+
+  100% {
+    background: linear-gradient(45deg, #c0f0f0, #fbc2eb);
+  }
+}
+
+
+@media (max-width: 756px) {
+  body {
+    animation: gradientAnimation 2s alternate infinite;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background: linear-gradient(45deg, #c0f0f0, #fad0c4);
+    }
+
+    100% {
+      background: linear-gradient(45deg, #c0f0f0, #fbc2eb);
+    }
+  }
+
+}
+
+
+
+.hero-section {
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(45deg, #c0f0f0, #fad0c4);
+  background-size: 400% 400%;
+  animation: gradientShift 10s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(45deg, #c0f0f0, #fad0c4);
+  }
+
+  100% {
+    background: linear-gradient(45deg, #c0f0f0, #fbc2eb);
+  }
+}
+
+
+.Home-enrollButton {
+  width: fit-content;
+  padding: 1rem 2rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: wheat;
+  background-color: #f58220;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-left: 0;
+  align-self: flex-start;
+  margin-left: 60px;
+}
+
+.Home-enrollButton:hover {
+  background-color: #ea580c;
+  transform: scale(1.05);
+}
+
+/* Left section: main + subtext + button */
+.left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  /* Center vertically */
+  overflow: hidden;
+
+}
+
+/* Right section: image or cards */
+.right {
+  flex: 1;
+
+}
+
+/* Responsive styles for tabs and mobile */
+
+
+@media (max-width: 1150px) {
+
+  .left,
+  .right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    text-align: center;
+
+  }
+
+  .right {
+    margin-top: 2rem;
+    /* adds spacing below the text */
+  }
+
+  .Home-enrollButton {
+    margin: 1rem auto 0 auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .left,
+  .right {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .right {
+    justify-content: center;
+    margin-top: 2rem;
+    /* adds spacing below the text */
+  }
+
+  /* .enrollButton {
+    margin: 1rem auto 0 auto;
+    display: block;
+  } */
+  .Home-enrollButton {
+    margin-top: -10px;
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    font-size: 20px;
+    width: 110%;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home-enrollButton {
+    margin-top: -10px;
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    font-size: 12px;
+    width: 110%;
+    border-radius: 5px;
+  }
+}

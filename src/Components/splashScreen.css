@@ -16,15 +16,22 @@ body {
     background-blend-mode: darken;
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.circleLogo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* exact center */
+}
 
 .circleLogo img {
     height: 300px;
     width: 300px;
-    /* margin-top: 250px; */
     border-radius: 50%;
     background-color: white;
     border: 1px solid orange;
@@ -44,29 +51,25 @@ body {
     }
 }
 
-.scrollWrapper{
-    display: flex;
-    flex-direction: column;
-    margin-top: 150px;
-    gap: 10px;
+.scrollWrapper {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .scroll {
     color: white;
     font-weight: bold;
-    margin: 0;
-
 }
 
 
 .down {
+    margin-top: 80px;
     font-size: 50px;
     text-shadow: 0 0 10px rgba(255, 165, 0, 0.8),
         0 0 20px rgba(255, 140, 0, 0.8),
         0 0 30px rgba(255, 69, 0, 0.8);
-    align-items: center;
-    margin: 0;
-
 }
 
 .scroll,
@@ -94,7 +97,42 @@ body {
     }
 }
 
+/* Responsiveness */
+@media (max-width: 768px) {
+    .splashScreen {
 
-@media (max-width: 659px) {
-
+        background-size: 115%;
+    }
 }
+
+@media (max-width: 480px) {
+    .splashScreen {
+        background-position: 60% -40px;
+        background-size: 105%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .circleLogo img {
+        height: 200px;
+        width: 200px;
+        margin: 0;
+    }
+
+    .scroll {
+        font-size: 26px;
+
+    }
+
+
+    .down {
+        margin-top: 80px;
+        font-size: 30px;
+
+    }
+}
+
+

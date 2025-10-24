@@ -3,7 +3,6 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
-    background-color: grey;
 }
 
 /* Navigation Styles */
@@ -128,10 +127,11 @@ body {
 }
 
 #search-button {
-    padding: 0.4rem 0.4rem;
+    width: 30px;
+    height: 30px;
     position: absolute;
-    right: 10px;
-    font-size: 16px;
+    right: 8px;
+    font-size: 14px;
     background-color: #f58220;
     color: white;
     border: 1px solid #000;
@@ -170,56 +170,64 @@ body {
         display: block;
     }
 }
-
-
 @media (max-width: 659px) {
-    .s-course {
+    .nav {
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: auto;
       width: 100%;
-      margin-top: 10px;
-      order: 2; /* forces it below logo/nav/menu */
+      padding: 1rem;
     }
   
-    .search-container {
-      width: 100%;
+    .blackLogo {
+      margin: 0;
+      margin-left: 0;
+      position: relative;
+      z-index: 10;
     }
+  
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 65%;
+        transform: translateX(-50%);
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.8rem;
+        z-index: 1100;
+      }
+      
   
     .search-bar-container {
+      position: absolute;
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
-      width: 100%;
-      gap: 10px;
+      align-items: center;
     }
   
-    #search-bar {
-      flex: 1;
+    .search-bar-container input[type="text"] {
+      display: none;
     }
   
     #search-button {
-      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      font-size: 18px;
+      border-radius: 50%;
+      background-color: #f58220;
+      color: white;
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+  
+    #search-button:hover {
+      background-color: #ea580c;
+      transform: scale(1.05);
     }
   }
-
-  @media (max-width: 480px) {
-    .s-course {
-      width: 100%;
-      margin-top: 10px;
-      order: 2; /* forces it below logo/nav/menu */
-    }
   
-    .search-container {
-      width: 100%;
-    }
-  
-    .search-bar-container {
-      display: flex;
-      width: 100%;
-      gap: 10px;
-    }
-  
-    #search-bar {
-      flex: 1;
-    }
-  
-    #search-button {
-      flex-shrink: 0;
-    }
-  }

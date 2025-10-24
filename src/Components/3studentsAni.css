@@ -1,0 +1,157 @@
+/* ===== Container Styles ===== */
+.header__image {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 600px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+  
+  /* ===== Background Image (Bottom Layer) ===== */
+  .header__image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../images/header-bg.png"); /* Replace with your background */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 0; /* Bottom layer */
+  }
+  
+  /* ===== Rotating Skill Blocks (Middle Layer) ===== */
+  .header__image__card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background-color: var(--white, #fff);
+    color: var(--text-dark, #222);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    white-space: normal;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Middle layer */
+    transition: transform 0.2s linear;
+  }
+  
+  .header__image__card span {
+    font-size: 1.3rem;
+    color: var(--primary-color, #f58220);
+    margin-bottom: 0.3rem;
+  }
+  
+  .header__image__card .label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+  
+  /* ===== Students Image (Top Layer) ===== */
+  .students-img {
+    position: relative;
+    width: 500px;
+    height: auto;
+    z-index: 2; /* Top layer */
+  }
+  
+  /* ===== Responsive Styles ===== */
+  @media (max-width: 1024px) {
+    .header__image::before {
+      max-width: 500px;
+    }
+    .header__image {
+      height: 500px;
+    }
+    .header__image {
+      height: 500px; /* or adjust as needed */
+      margin-top: 1rem;
+    }
+    .students-img {
+      width: 400px;
+    }
+  
+    .header__image__card {
+      width: 90px;
+      height: 90px;
+      font-size: 0.65rem;
+    }
+  
+    .header__image__card span {
+      font-size: 1.1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header__image {
+      max-width: 400px;
+      height: 400px;
+    }
+  
+    .students-img {
+      width: 320px;
+    }
+  
+    .header__image__card {
+      width: 80px;
+      height: 80px;
+      font-size: 0.6rem;
+    }
+  
+    .header__image__card span {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .header__image::before {
+      max-width: 400px; 
+      
+    }
+    .header__image {
+      height: 320px;
+      margin-top: -40px;
+      width: 100%;
+    }
+  
+    .students-img {
+      width: 250px;
+    }
+  
+    .header__image__card {
+      width: 70px;
+      height: 70px;
+      font-size: 0.55rem;
+    }
+  
+    .header__image__card span {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .header__image {
+    opacity: 0;
+    transition: opacity 3s ease-in-out;
+  }
+  
+  .header__image.fade-in {
+    opacity: 1;
+  }

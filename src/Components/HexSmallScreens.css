@@ -1,0 +1,237 @@
+body {
+  background-color: #f9c74f;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.hex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #fff;
+  font-family: sans-serif;
+}
+
+.hex-content {
+  padding: 10px;
+  text-align: center;
+  overflow: hidden; /* already present */
+  text-overflow: ellipsis;
+  white-space: normal;
+  word-wrap: break-word;
+  color: black;
+  font-size: 12px;
+  max-height: 100%; /* Ensures it doesn’t spill out */
+  box-sizing: border-box;
+}
+
+
+.bee-icon {
+  width: 50px;
+  margin-bottom: 20px;
+}
+
+.hex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0px 0;
+}
+
+.hex-row .offset {
+  margin-top: -30px;
+  margin-left: 10px;
+}
+
+.hex {
+  width: 320px;
+  height: 320px;
+  margin: 0px;
+  background-color: #ccc;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%,
+          7% 75%, 7% 25%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.2s;
+
+}
+
+.hex:hover {
+  transform: scale(1.05);
+}
+
+.hex .icon {
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.hex .icon i {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.hex-content .sixHex-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+
+.hex.color-3 {
+  background-color: #f3722c;
+}
+
+.hex.color-2 {
+  background-color: #f9c74f;
+}
+
+.hex.color-1 {
+  background-color: #f8961e;
+}
+
+.hex.empty {
+  background: transparent;
+  clip-path: none;
+}
+
+
+  
+h1 {
+  color: #f58220;
+ margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.bee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+}
+
+.bee-icon {
+  position: absolute;
+  width: 40px;
+  z-index: 10;
+}
+
+.bee1 {
+  animation: dnaFlyRight 8s linear infinite;
+
+}
+
+.bee2 {
+  animation: dnaFlyLeft 8s linear infinite;
+
+}
+
+@keyframes dnaFlyRight {
+  0% {
+      left: -10%;
+      top: 50%;
+      transform: scaleX(-1) translateY(0);
+  }
+
+  25% {
+      left: 20%;
+      top: 40%;
+      transform: scaleX(-1) translateY(-10px);
+  }
+
+  50% {
+      left: 50%;
+      top: 60%;
+      transform: scaleX(-1) translateY(10px);
+  }
+
+  75% {
+      left: 80%;
+      top: 40%;
+      transform: scaleX(-1) translateY(-10px);
+  }
+
+  100% {
+      left: 110%;
+      top: 50%;
+      transform: scaleX(-1) translateY(0);
+  }
+}
+
+@keyframes dnaFlyLeft {
+  0% {
+      left: 110%;
+      top: 50%;
+      transform: scaleX(1) translateY(0);
+  }
+
+  25% {
+      left: 80%;
+      top: 60%;
+      transform: scaleX(1) translateY(10px);
+  }
+
+  50% {
+      left: 50%;
+      top: 40%;
+      transform: scaleX(1) translateY(-10px);
+  }
+
+  75% {
+      left: 20%;
+      top: 60%;
+      transform: scaleX(1) translateY(10px);
+  }
+
+  100% {
+      left: -10%;
+      top: 50%;
+      transform: scaleX(1) translateY(0);
+  }
+}
+
+@media (max-width: 850px) {
+  .hex {
+      width: 250px;
+      height: 250px;
+  }
+ .hex-content .sixHex-title {
+      font-size: 20px;
+  }
+
+  .hex-container h1 {
+    font-size: 36px;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .hex {
+      width: 100px;
+      height: 100px;
+  }
+.hex-content .sixHex-title{
+      font-size: 10px;
+      margin-bottom: 15px;
+  }
+  
+.bee-icon {
+    width: 26px;
+}
+
+  .hex-container h1 {
+  font-size: 16px;
+}
+.hex .icon i {
+  font-size: 14px;
+}
+}
+
