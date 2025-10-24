@@ -44,7 +44,7 @@ body {
     height: 40px;
     flex-shrink: 0;
     margin-left: -10px;
-    
+
 }
 
 .blackLogo span {
@@ -111,9 +111,9 @@ body {
 
 /* Search Bar with Button */
 .search-bar-container {
-    position: relative; 
+    position: relative;
     display: inline-flex;
-    align-items: center; 
+    align-items: center;
 }
 
 .search-bar-container input[type="text"] {
@@ -170,25 +170,26 @@ body {
         display: block;
     }
 }
+
 @media (max-width: 659px) {
     .nav {
-      justify-content: space-between;
-      align-items: center;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: auto;
-      width: 100%;
-      padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: auto;
+        width: 100%;
+        padding: 1rem;
     }
-  
+
     .blackLogo {
-      margin: 0;
-      margin-left: 0;
-      position: relative;
-      z-index: 10;
+        margin: 0;
+        margin-left: 0;
+        position: relative;
+        z-index: 10;
     }
-  
+
     .menu-toggle {
         display: block;
         position: absolute;
@@ -198,36 +199,35 @@ body {
         transform: translate(-50%, -50%);
         font-size: 1.8rem;
         z-index: 1100;
-      }
-      
-  
+    }
+
+
     .search-bar-container {
-      position: absolute;
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      display: flex;
-      align-items: center;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
     }
-  
+
     .search-bar-container input[type="text"] {
-      display: none;
+        display: none;
     }
-  
+
     #search-button {
-      width: 30px;
-      height: 30px;
-      font-size: 18px;
-      border-radius: 50%;
-      background-color: #f58220;
-      color: white;
-      border: 1px solid #000;
-      cursor: pointer;
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+        border-radius: 50%;
+        background-color: #f58220;
+        color: white;
+        border: 1px solid #000;
+        cursor: pointer;
     }
-  
+
     #search-button:hover {
-      background-color: #ea580c;
-      transform: scale(1.05);
+        background-color: #ea580c;
+        transform: scale(1.05);
     }
-  }
-  
+}
